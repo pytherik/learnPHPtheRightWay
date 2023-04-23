@@ -15,3 +15,4 @@ $sum = function(int|float ...$numbers) use($x): void
 $sum(1,2,3,4);
 
 echo '<br/>$x hat sich außen nicht verändert: '. $x;
+
