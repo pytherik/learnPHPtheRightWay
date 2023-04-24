@@ -35,34 +35,27 @@
   </tr>
   </thead>
   <tbody>
-  <?php foreach ($transactions as $transaction) {
-    echo "<pre>";
-    print_r($transaction);
-    echo "</pre>";
-    if ($transaction['date'] != 'Date') { ?>
+  <?php foreach ($transactions as $transaction) { ?>
       <tr>
           <td><?= $transaction['date'] ?></td>
           <td><?= $transaction['check'] ?></td>
           <td><?= $transaction['desc'] ?></td>
           <td style="color:<?= $transaction['color'] ?> "><?= $transaction['amount'] ?></td>
       </tr>
-      <?php
-    }
-  }
-  ?>
+      <?php } ?>
   </tbody>
   <tfoot>
   <tr>
     <th colspan="3">Total Income:</th>
-    <td><?= $totalIncome ?></td>
+    <td><?= number_format($totalIncome,2) ?></td>
   </tr>
   <tr>
     <th colspan="3">Total Expense:</th>
-    <td><?= $totalExpense ?></td>
+    <td><?= number_format($totalExpense,2) ?></td>
   </tr>
   <tr>
     <th colspan="3">Net Total:</th>
-    <td><?= $netTotal ?></td>
+    <td><?= number_format($netTotal,2) ?></td>
   </tr>
   </tfoot>
 </table>
