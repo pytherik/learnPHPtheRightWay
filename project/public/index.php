@@ -10,8 +10,6 @@ define('APP_PATH', $root . 'app' . DIRECTORY_SEPARATOR);
 define('FILES_PATH', $root . 'transaction_files' . DIRECTORY_SEPARATOR);
 define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
 
-[$transactions, $totalIncome, $totalExpense] = getTransactionData();
-
-$netTotal = $totalIncome + $totalExpense;
+[$transactions, $netTotal, $totalIncome, $totalExpense] = getTransactionData();
 
 include '../views/transactions.php';

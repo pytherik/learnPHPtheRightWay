@@ -40,7 +40,7 @@
           <td><?= $transaction['date'] ?></td>
           <td><?= $transaction['check'] ?></td>
           <td><?= $transaction['desc'] ?></td>
-          <td style="color:<?= $transaction['color'] ?> "><?= $transaction['amount'] ?></td>
+          <td style="color:<?= $transaction['red'] ? 'red': 'green' ?> "><?= $transaction['amount'] ?></td>
       </tr>
       <?php } ?>
   </tbody>
